@@ -95,7 +95,7 @@ ul { list-style:none; }
 @keyframes rotateBorder { to { --border-angle:360deg; } }
 .tilt-card:hover .card-gradient-border { opacity:1; }
 .tilt-card { position:relative; }
-.tilt-card::before { content:''; position:absolute; inset:1px; border-radius:inherit; background:inherit; z-index:0; }
+.timeline-card h3, .timeline-card h4, .timeline-card p, .timeline-card .tech-tags { position:relative; z-index:2; }
 
 /* HERO */
 .hero { position:relative; min-height:100vh; display:flex; align-items:center; padding:100px 24px 60px; overflow:hidden; z-index:1; }
