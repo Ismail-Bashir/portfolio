@@ -170,7 +170,9 @@
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-    document.querySelectorAll('.reveal-text:not(.hero .reveal-text), .reveal-up:not(.hero .reveal-up), .reveal-scale:not(.hero .reveal-scale)').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal-text, .reveal-up, .reveal-scale').forEach(el => {
+        if (!el.closest('.hero')) revealObserver.observe(el);
+    });
 
     // ==================== TILT CARDS ====================
     document.querySelectorAll('.tilt-card').forEach(card => {
